@@ -1,7 +1,15 @@
 version: '3.1'
 
+
 services:
   gcc:
+    environment:
+      cpu: '3'
     build: .
     volumes:
       - './src:/build'
+    deploy:
+      resources:
+        limits:
+          cpus: '${cpu}'
+    working_dir: /build/netbsd

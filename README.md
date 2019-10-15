@@ -1,12 +1,10 @@
-Simple tool to build MINIX directly from git, without messing with compilers
+Simple tool to build NetBSD directly from git, without messing with compilers
 
-    git submodule add git://git.minix3.org/minix src/minix
+    git submodule add https://github.com/NetBSD/src.git src/netbsd
     docker-compose up
     
 Also should build NetBSD
 
 TODO:
 - Add parameters support to point build scripts, repo, branch, etc.
-- Do CPU quotas, because for now it uses only single core - it is slooow
-- Probably use pre-built LLVM or gcc, because it pre-builts toolchain - also 
-slow and not always necessary
+- Migrate to subtree instead of submodule https://nering.dev/2016/git-submodules-vs-subtrees/
